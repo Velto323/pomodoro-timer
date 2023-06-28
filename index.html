@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/84ac6015a2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css"></style>
+    <title>Document</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1> Pomedorro </h1>
+    <div class="main-page">
+        <form id="timer-form">
+            <div class="form-div"><label class="numbers-input" for="work-time-input"> Pomodoro time </label> <input type="number" id="work-time-input" class="input-field"></div>
+            <div class="form-div"><label class="numbers-input" for="break-time-input"> Break time </label> <input type="number" id="break-time-input" class="input-field"></div>
+            <div class="form-div"><label class="numbers-input" for="intervals-input"> Number of cycles </label> <input type="number" id="intervals-input" class="input-field"></div>
+            <div class="form-div" id="alert-toggle-input-div"><label id="alert-toggle-input-label" for="alert-toggle-input"> Alarm on end </label><input type="checkbox" id="alert-toggle-input" class="switch"></div>
+            <div class="form-div "  id="alert-sound-input-div">
+                <label for="alert-sound-input"> Alarm sound </label>
+                <fieldset id="alert-sound-input"> 
+                    <input type="radio" id="alert-1" class="radio-alert-sound" name="alert" value="1">  <label for="alert-1"><i class="alert-label fa-solid fa-1"></i></label>
+                    <input type="radio" id="alert-2" class="radio-alert-sound" name="alert" value="2">  <label for="alert-2"><i class="alert-label fa-solid fa-2"></i></label>
+                    <input type="radio" id="alert-3" class="radio-alert-sound" name="alert" value="3">  <label for="alert-3"><i class="alert-label fa-solid fa-3"></i></label>
+                </fieldset>
+            </div>
+            <button type="button" data-test="a" id="start-timer-button"> Lets go!</button>
+        </form> 
+    </div>
+
+    <div class="timer-body hidden">
+        <div class="timer-control-button-div"> 
+            <button class="pause-button">pause</button> 
+            <button class="resume-button">resume</button> 
+        </div>
+        <div class="clock"> 15:00 </div>
+        <div class="progress-bar" style="width: 10; --color: #006699" data-label="Loading..."></div>
+        <div class="mode-description"></div>
+        <script src="script.js"></script>
+    </div>
+    
+</body>
+</html>
